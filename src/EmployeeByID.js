@@ -44,7 +44,7 @@ const onSubmit = () => {
         url: githubURL || employeeDetails.url,
         organizations_url: orgURL || employeeDetails.organizations_url
     }
-    console.log(updatedEmployeeDetails);
+    
     const employeeList = (JSON.parse(localStorage.getItem("employeeList")) || []).filter((employee) => String(employeeDetails.id) !== String(employee.id))
     employeeList.unshift(updatedEmployeeDetails)
     localStorage.setItem(
